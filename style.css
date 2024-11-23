@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+:root{
+    --roxo-pr: #A908FF;
+}
+header{
+    background-color: var(--roxo-pr);
+    display: flex;
+    justify-content: end;
+}
+.titulo-header{
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    font-size: 45px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    flex: 1;
+}
+main{
+    width: 100vw;
+    height: 100vh;
+    background-image: url("imagens/fundo.webp");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.menu-botao div{
+    width: 50px;
+    height: 3px;
+    margin: 13px;
+    background: white;
+}
+.menu-botao{
+    cursor: pointer;
+    margin-top: 17px;
+    margin-right: 10px;
+}
+.menu-lateral{
+    position: fixed;
+    background-color: #a908ffa8;
+    display: flex;
+    right: 0;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 60vh;
+    width: 25vw;
+    border-radius: 0px 0px 0px 15px;
+    transform: translateX(100%);
+    transition: 0.5s;
+}
+.menu-lateral.active{
+    transform: translateX(0%);
+    transition: 0.5s;
+}
+.menu-lateral a{
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+}
+.menu-lateral a:hover{
+    text-decoration: underline;
+}
+
+
+.menu-botao.active .linha1{
+    transform: rotate(45deg) translateY(23px);
+    transition: 0.2s;
+}
+.menu-botao.active .linha2{
+    background: transparent;
+}
+.menu-botao.active .linha3{
+    transform: rotate(-45deg) translateY(-23px);
+    transition: 0.2s;
+}
+
+.menu-botao .linha1, .linha2, .linha3{
+    transition: 0.2s;
+}
+
+@media screen and (max-width:600px) {
+    .menu-lateral{
+        width: 50vw;
+    }
+    .titulo-header{
+        font-size: 35px;
+        align-self: center;
+    }
+    .menu-botao{
+        margin-top: 10px;
+    }
+}
