@@ -11,6 +11,8 @@ header{
     background-color: var(--roxo-pr);
     display: flex;
     justify-content: end;
+    position: fixed;
+    width: 100%;
 }
 .titulo-header{
     color: rgb(255, 255, 255);
